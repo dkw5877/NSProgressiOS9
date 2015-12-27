@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fi-jY-R8q">
+                                <rect key="frame" x="50" y="117" width="500" height="8"/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="36T-8L-O8L"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 bytes of 0 bytes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TN-5c-wlf">
+                                <rect key="frame" x="50" y="289" width="500" height="50"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.8980392157" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="waiting to download" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iE-rv-JsU">
+                                <rect key="frame" x="50" y="212" width="500" height="50"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.94117647059999998" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bSK-pQ-TGe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czm-5O-niN">
+                                <rect key="frame" x="155" y="399" width="291" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="YMW-wY-LSs"/>
+                                </constraints>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wsX-fK-Zae"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfG-fU-CtN">
+                                <rect key="frame" x="155" y="453" width="291" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Toggle Progess Type"/>
+                                <connections>
+                                    <action selector="toggleProgressType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6K4-PZ-xah"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0iE-rv-JsU" firstAttribute="top" secondItem="0fi-jY-R8q" secondAttribute="bottom" constant="87" id="32R-zb-2ke"/>
+                            <constraint firstItem="0iE-rv-JsU" firstAttribute="trailing" secondItem="0fi-jY-R8q" secondAttribute="trailing" id="AP2-mS-DnV"/>
+                            <constraint firstItem="czm-5O-niN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ogl-YB-mhG"/>
+                            <constraint firstItem="4TN-5c-wlf" firstAttribute="top" secondItem="0iE-rv-JsU" secondAttribute="bottom" constant="27" id="Rq9-7D-4Ii"/>
+                            <constraint firstItem="PfG-fU-CtN" firstAttribute="top" secondItem="czm-5O-niN" secondAttribute="bottom" constant="24" id="S47-g6-Out"/>
+                            <constraint firstItem="czm-5O-niN" firstAttribute="top" secondItem="4TN-5c-wlf" secondAttribute="bottom" constant="60" id="SAZ-Vv-4uT"/>
+                            <constraint firstItem="4TN-5c-wlf" firstAttribute="leading" secondItem="0fi-jY-R8q" secondAttribute="leading" id="T2M-O7-IyT"/>
+                            <constraint firstItem="PfG-fU-CtN" firstAttribute="leading" secondItem="czm-5O-niN" secondAttribute="leading" id="U7y-eH-6hE"/>
+                            <constraint firstItem="0fi-jY-R8q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="97" id="byP-Uw-kA1"/>
+                            <constraint firstItem="PfG-fU-CtN" firstAttribute="height" secondItem="czm-5O-niN" secondAttribute="height" id="ctp-jP-oGw"/>
+                            <constraint firstItem="4TN-5c-wlf" firstAttribute="height" secondItem="0iE-rv-JsU" secondAttribute="height" id="dbT-fo-N6G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0fi-jY-R8q" secondAttribute="trailing" constant="30" id="i21-IZ-fhf"/>
+                            <constraint firstItem="4TN-5c-wlf" firstAttribute="trailing" secondItem="0fi-jY-R8q" secondAttribute="trailing" id="kqB-x2-fGt"/>
+                            <constraint firstItem="PfG-fU-CtN" firstAttribute="trailing" secondItem="czm-5O-niN" secondAttribute="trailing" id="rt8-OV-Oye"/>
+                            <constraint firstItem="0fi-jY-R8q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="wYc-5Q-fCt"/>
+                            <constraint firstItem="0iE-rv-JsU" firstAttribute="leading" secondItem="0fi-jY-R8q" secondAttribute="leading" id="zbM-BY-y0f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="0fi-jY-R8q" id="1m4-BH-869"/>
+                        <outlet property="progressDescriptionLabel" destination="4TN-5c-wlf" id="ixx-44-wCI"/>
+                        <outlet property="progressLabel" destination="0iE-rv-JsU" id="Hmp-j5-pYT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="387"/>
+        </scene>
+    </scenes>
+</document>
